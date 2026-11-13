@@ -1,0 +1,6 @@
+try {
+    if (wallet.balance < amount) throw new Exception("Fonds insuffisants");
+    wallet.balance -= amount;
+} catch (Exception e) { return ResponseEntity.status(400).body(e.getMessage()); }
+
+
